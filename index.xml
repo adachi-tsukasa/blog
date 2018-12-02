@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TofuFactory</title>
+    <link>https://adachi-tsukasa.github.io/blog/</link>
+    <description>Recent content on TofuFactory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 29 May 2018 00:24:11 +0900</lastBuildDate>
+    
+	<atom:link href="https://adachi-tsukasa.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>バリ島でコワーキングスペースを使った話</title>
+      <link>https://adachi-tsukasa.github.io/blog/post/20180528/</link>
+      <pubDate>Tue, 29 May 2018 00:24:11 +0900</pubDate>
+      
+      <guid>https://adachi-tsukasa.github.io/blog/post/20180528/</guid>
+      <description>&lt;p&gt;5 月は東南アジアをタイ → シンガポール → インドネシアときて、バリ島に来てみました。
+バリ島では数少ないコワーキングスペースが Canggu という地区のビーチにあります。
+前評判もよく、バリ島に来た理由もこのコワーキングスペースを使う為といっても過言ではありません。
+そんなコワーキングスペース、Dojo Bali を紹介しようと思います。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.dojobali.org/en&#34;&gt;Coworking Bali | Dojo Bali Canggu Indonesia&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>バンコクでコワーキングスペースを使った話</title>
+      <link>https://adachi-tsukasa.github.io/blog/post/20180519/</link>
+      <pubDate>Sat, 19 May 2018 14:34:02 +0800</pubDate>
+      
+      <guid>https://adachi-tsukasa.github.io/blog/post/20180519/</guid>
+      <description>&lt;p&gt;バンコクに行くのは二度目で、一度目の去年は Ekamai 駅から徒歩 5 分〜の HubbaEkkamai というコワーキングスペースを使ってみました。
+一軒家でアジアな雰囲気を保ちながら、充実したインフラ設備と清潔感のあるコワーキングスペースでした。
+イベントモノも多くで、初日にお昼ごはん（甘いお粥だった気がします）が振る舞われてコワーキングスペースの皆さんと
+テラスで食事をした思い出があります。&lt;/p&gt;
+
+&lt;p&gt;今回も同じ Hubba を使ったのですが、
+前回と違い Siam 駅よりほぼ直結で行ける SiamDiscovery の 4F にある DiscoveryHubba を使ってみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.hubbathailand.com/&#34;&gt;HUBBA Thailand | Bangkok coworking space, startup hub&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

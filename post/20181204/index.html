@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    
+
+<title>Angular技術者が2018年から触れたIonic | TofuFactory</title>
+
+<meta name="generator" content="">
+<meta name="author" content="">
+<meta property="og:locale" content="">
+<meta property="fb:app_id" content="">
+<meta property="og:title" content="Angular技術者が2018年から触れたIonic">
+<meta property="og:url" content="https://adachi-tsukasa.github.io/blog/post/20181204/">
+<meta property="og:site_name" content="TofuFactory">
+
+
+
+<meta name="description" content="この記事はIonicアドベントカレンダー4日目の記事です。
+
+はじめまして、こんにちは。
+Angularを中心に主にフロントエンドやってます。
+半年ほど前からIonicの現場で稼働を始めたので、
+イチAngular野郎なりに感じたことを書いてみます。
+深い内容はないです。半分ポエムです。...">
+<meta property="og:description" content="この記事はIonicアドベントカレンダー4日目の記事です。
+
+はじめまして、こんにちは。
+Angularを中心に主にフロントエンドやってます。
+半年ほど前からIonicの現場で稼働を始めたので、
+イチAngular野郎なりに感じたことを書いてみます。
+深い内容はないです。半分ポエムです。...">
+<meta name="twitter:description" content="この記事はIonicアドベントカレンダー4日目の記事です。
+
+はじめまして、こんにちは。
+Angularを中心に主にフロントエンドやってます。
+半年ほど前からIonicの現場で稼働を始めたので、
+イチAngular野郎なりに感じたことを書いてみます。
+深い内容はないです。半分ポエムです。...">
+
+
+
+
+<meta property="og:image" content="https://adachi-tsukasa.github.io/blog/">
+<meta property="twitter:image" content="https://adachi-tsukasa.github.io/blog/">
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:article:published_time" content="2018-12-04T00:00:00&#43;09:00">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title" content="Angular技術者が2018年から触れたIonic">
+<meta name="twitter:url" content="https://adachi-tsukasa.github.io/blog/post/20181204/">
+
+
+
+<link rel="index" href="https://adachi-tsukasa.github.io/blog/"/>
+
+    <meta property="og:site_name" content="TofuFactory">
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="stylesheet" type="text/css" href="https://adachi-tsukasa.github.io/blog/assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="https://adachi-tsukasa.github.io/blog/assets/css/icons.css" />
+    <link rel="stylesheet" type="text/css" href="https://adachi-tsukasa.github.io/blog/assets/css/screen.css" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Lato:100,100i,300,300i,400,400i,700,700i|Source+Code+Pro:300,400,500,700" rel="stylesheet">
+    
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="https://adachi-tsukasa.github.io/blog/assets/bigfoot/dist/bigfoot.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://adachi-tsukasa.github.io/blog/assets/bigfoot/dist/bigfoot-number.css" />
+    <script type="text/javascript">
+        $.bigfoot();
+    </script>
+    
+    
+</head>
+
+    <body class="post-template">
+        <header class="main-header">
+	<div class="main-header-content">
+		<h1 class="blog-title">
+			<a href="https://adachi-tsukasa.github.io/blog/">
+				
+           TofuFactory
+				
+			</a>
+		</h1>
+		<h2 class="blog-description"></h2>
+	</div>
+
+	<div class="nav">
+    
+		
+	</div>
+</header>
+
+        
+<main class="content" role="main">
+  <article class="post">
+    <header class="post-header">
+      
+      <h2 class="post-title">Angular技術者が2018年から触れたIonic</h2>
+      <section class="post-meta">
+        <time class="post-date">December 04, 2018</time>
+      </section>
+    </header>
+    <section class="post-content">
+      <p>この記事は<a href="https://qiita.com/advent-calendar/2018/ionicframework">Ionicアドベントカレンダー</a>4日目の記事です。<br></p>
+
+<p>はじめまして、こんにちは。<br>
+Angularを中心に主にフロントエンドやってます。<br>
+半年ほど前からIonicの現場で稼働を始めたので、
+イチAngular野郎なりに感じたことを書いてみます。
+<br>深い内容はないです。半分ポエムです。</p>
+
+<p>本記事の内容</p>
+
+<pre><code>Ionic : 3系
+Angular: 5系
+</code></pre>
+
+<h2 id="page-provider">Page,Provider</h2>
+
+<p><strong>PageとComponentの違いってなんだろう</strong>がIonic習熟のスタートでした。<br>
+git cloneしてきた時の瞬間の違和感すごかったし。</p>
+
+<p>Pageはざっくりアプリ1画面分をWrapしているComponentの解釈です。<br>
+うまくComponent分離できていない状態のAngularプロジェクトでも、こんなComponent作っちゃいがちです。
+ただ、IonicにおけるPageの恩恵って大きいなと。<br>
+Pageはビュー単体として機能し、Componentと違ってスタンドアローンの概念を持っています。またビュー単位でのユーザー操作と、Pageのライフサイクルイベントによる制御はユーザー操作に即していることが多く、Pageはユーザー操作にマッチした仕組みといえるはずです。モバイルアプリに特化したIonicならではですね。
+後述しますが、PageにAngularのライフサイクルイベントが使えると思ってガリガリ書いてたら、思ったように動かなかったり。</p>
+
+<p><strong>Service -&gt; Provider</strong>
+なのはすぐ理解できました。
+しかし、端々にAngularとの和解できない何かを感じる。</p>
+
+<h2 id="devapp">DevApp</h2>
+
+<p>iOSのデバッグ時は必須。</p>
+
+<pre><code>ionic serve -c
+</code></pre>
+
+<p>を実行するだけで実機検証できるのは本当に強い。素直に感動する。<br>
+この機能だけでもAngularにあれば捗ること間違いなしのはず。</p>
+
+<p>実機検証も</p>
+
+<pre><code>ionic cordova run iosかandroid -lc
+</code></pre>
+
+<p>でやれちゃう。Ionicの力ってすげー。</p>
+
+<h2 id="ion">ion-*</h2>
+
+<p>クセの強いComponentが多いのですが、一気にソレっぽいモバイルアプリになるところ。<br>
+OnsenUIを引き合いに出してちょっと見てみました。</p>
+
+<p>リストビューでアイテムを右スワイプすると削除ボタンが表示される実装をそれぞれですると、</p>
+
+<p><strong>Ionic</strong></p>
+
+<pre><code>&lt;ion-list&gt;
+  &lt;ion-item-sliding&gt;
+    &lt;ion-item&gt;
+      &lt;span&gt;item&lt;/span&gt;
+    &lt;/ion-item&gt;
+    &lt;ion-item-options side=&quot;right&quot;&gt;
+      &lt;button ion-button (click)=&quot;delete()&quot;&gt;削除&lt;/button&gt;
+    &lt;/ion-item-options&gt;
+  &lt;/ion-item-sliding&gt;
+&lt;/ion-list&gt;
+</code></pre>
+
+<p><strong>OnsenUI</strong></p>
+
+<pre><code>&lt;ons-list&gt;
+  &lt;ons-list-item style=&quot;padding: 0&quot;&gt;
+    &lt;ons-carousel style=&quot;height: 50px; width: 100%&quot; swipeable initial-index=&quot;0&quot; auto-scroll&gt;
+      &lt;ons-carousel-item&gt;
+        Item
+      &lt;/ons-carousel-item&gt;
+      &lt;ons-carousel-item&gt;
+        &lt;button&gt;削除&lt;/button&gt;
+      &lt;/ons-carousel-item&gt;
+    &lt;/ons-carousel&gt;
+  &lt;/ons-list-item&gt;
+&lt;/ons-list&gt;
+</code></pre>
+
+<p>OnsenUIは↑の実装＋スワイプ時にItemを途中まで残す実装が必要なのですが、<br>
+IonicにあってOnsenUIにないネイティブっぽいUIセットがあったりするということです。</p>
+
+<h2 id="lifecycle">Lifecycle</h2>
+
+<p>Pageのライフサイクルイベントで、ユーザー操作に即した制御を書きつつ、<br>
+必要に応じてネストされたComponentでAngularのライフサイクルに制御を書く。</p>
+
+<p>ライフサイクルイベントのなかでも<br>
+<code>ionViewDidLoad</code>はページがキャッシュされていない時に呼ばれるイベントであり、
+初期処理を書く際にすごく有用。</p>
+
+<p>そしてIonicとAngular共通して言えるのは、<br>
+Constuctorになんとなくで書いちゃまずいということ。</p>
+
+<h2 id="番外編">番外編</h2>
+
+<h3 id="ios-androidリリース">iOS/Androidリリース</h3>
+
+<p>どちらも1人では乗り切れませんでしたが、体験しました。すごく大変。<br>
+煩雑な手続きと審査。モバイルアプリ最大の障壁だと思っています。<br>
+でもIonicはWebアプリとしてもリリースできるので、iOS/Androidリリースから逃れられますね笑<br>
+そこもまた魅力の一つです。</p>
+
+<h2 id="総括">総括</h2>
+
+<p>2018年はIonic漬け…とまではいきませんが、<br>
+触れる時間が最も多かったライブラリでした。<br>
+Ionic4楽しみっすねーーー</p>
+    </section>
+    <footer class="post-footer">
+      
+    </footer>
+  </article>
+</main>
+
+        <footer class="site-footer">
+  <section class="rss"><a class="subscribe-button icon-feed" href="https://adachi-tsukasa.github.io/blog/index.xml"></a></section>
+  
+  
+  <section class="copyright">&copy; 2018 TofuFactory</section>
+  <section class="poweredby"><a href="http://thedarkroast.com/arabica">Arabica</a> theme by Sean Lunsford. Published with <a href="https://gohugo.io">Hugo</a>.</section>
+</footer>
+
+
+
+    </body>
+</html>

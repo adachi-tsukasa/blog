@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tech on TofuFactory</title>
+    <link>https://adachi-tsukasa.github.io/blog/categories/tech/</link>
+    <description>Recent content in Tech on TofuFactory</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja-jp</language>
+    <lastBuildDate>Tue, 04 Dec 2018 00:00:00 +0900</lastBuildDate>
+    
+	<atom:link href="https://adachi-tsukasa.github.io/blog/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Angular技術者が2018年から触れたIonic</title>
+      <link>https://adachi-tsukasa.github.io/blog/post/20181204/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0900</pubDate>
+      
+      <guid>https://adachi-tsukasa.github.io/blog/post/20181204/</guid>
+      <description>&lt;p&gt;この記事は&lt;a href=&#34;https://qiita.com/advent-calendar/2018/ionicframework&#34;&gt;Ionicアドベントカレンダー&lt;/a&gt;4日目の記事です。&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;はじめまして、こんにちは。&lt;br&gt;
+Angularを中心に主にフロントエンドやってます。&lt;br&gt;
+半年ほど前からIonicの現場で稼働を始めたので、
+イチAngular野郎なりに感じたことを書いてみます。
+&lt;br&gt;深い内容はないです。半分ポエムです。&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
